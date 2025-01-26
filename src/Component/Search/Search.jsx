@@ -1,3 +1,4 @@
+import { HiSearch } from "react-icons/hi"
 
 // eslint-disable-next-line react/prop-types
 const Search = ({SearchTerm,setSearchTerm}) => {
@@ -5,7 +6,7 @@ const Search = ({SearchTerm,setSearchTerm}) => {
     <>
        <div className="search">
         <div>
-            <img src="../public/search.svg" alt="search" />
+          <HiSearch className="text-white text-4xl"/>
             <input
              type="text"
              placeholder="Search Through Movies" 
