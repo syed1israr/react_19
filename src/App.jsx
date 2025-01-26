@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Search from "./Component/Search/Search";
 import Spinner from "./Component/Spinner/Spinner";
+import MovieCard from "./Component/Card/MovieCard";
 
 /* 
 https://api.themoviedb.org/3/discover/movie
@@ -48,7 +49,7 @@ const App = () => {
   }, []);
 
   return (
-    <main>
+    <main className=" overflow-x-hidden">
       <div className="pattern" />
       <div className="wrapper">
         <header>
@@ -67,7 +68,7 @@ const App = () => {
           ) : (
             <ul>
               {movies.map((movie) => (
-                <li key={movie.id} className="text-white">{movie.title}</li>
+                <MovieCard key={movie.id} movie = {movie}/>
               ))}
             </ul>
           )}
